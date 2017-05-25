@@ -30,8 +30,10 @@ public class ImageThief {
              end = s.indexOf(".jpg" , src) ;
             
             String url = s.substring(src+ "src".length()+2 , end + ".jpg".length() );
+            if(url.startsWith("http")) {
             System.out.println(url);
             br.println(url);
+            }
             }catch(Exception e){
                 break;
             }
